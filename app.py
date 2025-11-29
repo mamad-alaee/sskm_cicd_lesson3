@@ -1,0 +1,14 @@
+from fastapi import FastAPI,HTTPException
+
+app = FastAPI()
+
+@app.get("/")
+def read_root():
+    return {"Hello": "World"}
+
+@app.get("/error")
+def response_error():
+    raise HTTPException(
+        status_code=404,
+        detail="Item not found")
+    
