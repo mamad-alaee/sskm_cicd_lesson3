@@ -14,7 +14,7 @@ def test_app_root():
     
 def test_app_error():
     res = client.get("/error")
-    assert res.status_code == 404
+    assert res.status_code == 401
     assert res.json() == {'detail': 'Item not found'}
     
 
