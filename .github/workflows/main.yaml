@@ -22,6 +22,7 @@ jobs:
           run: |
             pytest -v
     run_project:
+        needs: test_project
         runs-on: ubuntu-latest
         steps:
         - uses: actions/checkout@v3
