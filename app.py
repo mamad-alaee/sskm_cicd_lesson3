@@ -9,6 +9,6 @@ def read_root():
 @app.get("/error")
 def response_error():
     raise HTTPException(
-        status_code=404,
+        status_code=401,
         detail="Item not found")
     
